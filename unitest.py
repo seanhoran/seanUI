@@ -30,7 +30,7 @@ rdists = ((xc1-xc2)**2+(yc1-yc2)**2)**0.5
 
 nugget = st.slider(label="Nugget", min_value=0.0, max_value=1.0, value=0.1, step=0.1, key="knugget")
 var = 1.0 - nugget
-srange = st.slider(label="Range", min_value=10., max_value=200., value=50., step=10, key="krange")
+srange = st.slider(label="Range", min_value=10., max_value=200., value=50., step=10., key="krange")
 
 
 distmat = variogram(distmat, nugget=nugget, var=var, srange=srange)
