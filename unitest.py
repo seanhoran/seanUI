@@ -50,7 +50,7 @@ ax.scatter(x,y,c=z, edgecolor="black")
 
 st.pyplot(fig)
 
-url = "https://slrgroup-my.sharepoint.com/:b:/g/personal/shoran_slrconsulting_com/EXkBl1KTLXlDg_fsbin6FjEBOguHwHbMew3nrYR7v2Ux2g?e=fim8Qe"
+url = "Lyceum Presentation.pdf"
 html = '<embed src=' + url +  'width="800px" height="2100px" />'
 st.components.v1.html(html, width=None, height=None, scrolling=False)
 
