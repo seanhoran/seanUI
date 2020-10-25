@@ -9,6 +9,7 @@ def variogram(h, nugget=0.0, var=1.0, srange=100.):
     return gamma; 
 
 st.title("Kriging Example")
+st.write("Small proof of concept APP created by Sean Horan")
 st.sidebar.title("this is a sidebar")
 
 x, y, z = np.random.rand(100), np.random.rand(100), np.random.rand(100)
