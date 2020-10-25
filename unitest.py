@@ -53,7 +53,7 @@ st.pyplot(fig)
 url = "Lyceum Presentation.pdf"
 html = '<embed src="' + url +  '" width="800px" height="2100px" />'
 
-html = '<iframe src="https://docs.google.com/gview?url=' url + '" style="width:600px; height:500px;" frameborder="0"></iframe>'
+html = '<iframe src="https://docs.google.com/gview?url=' + url + '" style="width:600px; height:500px;" frameborder="0"></iframe>'
 
 st.write(html)
 
