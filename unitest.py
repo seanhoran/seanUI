@@ -59,5 +59,5 @@ st.pyplot(fig)
 
 #st.components.v1.html(html, width=None, height=None, scrolling=False)
 
-st.image("Lyceum Presentation.jpg")
+st.image("Lyceum Presentation.jpg", width=10)
 
