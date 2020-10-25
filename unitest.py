@@ -51,7 +51,7 @@ ax.scatter(x,y,c=z, edgecolor="black")
 st.pyplot(fig)
 
 url = "Lyceum Presentation.pdf"
-html = '<embed src=' + url +  'width="800px" height="2100px" />'
+html = '<embed src="' + url +  '" width="800px" height="2100px" />'
 
 st.write(html)
 st.components.v1.html(html, width=None, height=None, scrolling=False)
