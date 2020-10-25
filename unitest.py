@@ -1,6 +1,7 @@
 import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
 
 def variogram(h, nugget=0.0, var=1.0, srange=100.):
     gamma = nugget + var*((3*h)/(2*srange)-(h**3)/(srange**3))
@@ -60,4 +61,8 @@ st.pyplot(fig)
 #st.components.v1.html(html, width=None, height=None, scrolling=False)
 
 st.image("Lyceum Presentation.jpg", width=700)
+
+path = "https://docs.google.com/file/d/1F7G4TYfLPyR-aLb88slpKxCNuHgiVdh-/edit?usp=docslist_api&filetype=msexcel"
+df = pd.read_excel(path)
+st.dataframe(df)
 
