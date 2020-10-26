@@ -41,7 +41,7 @@ rdists = variogram(rdists, nugget=nugget, var=var, srange=srange)
 invdists = np.linalg.inv(distmat)
 weights = np.dot(rdists, invdists)
 
-kvar = np.sum(distmat) - np.sum(weights*rdists, axis=1)
+kvar = 1 - (np.sum(distmat) - np.sum(weights*rdists, axis=1))
 
 zc = np.dot(weights,z)
 
