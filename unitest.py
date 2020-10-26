@@ -39,8 +39,9 @@ distmat = variogram(distmat, nugget=nugget, var=var, srange=srange)
 rdists = variogram(rdists, nugget=nugget, var=var, srange=srange)
 
 invdists = np.linalg.inv(distmat)
-
 weights = np.dot(rdists, invdists)
+
+kvar = np.sum(distmat) - np.dot(weights, rdists)
 
 zc = np.dot(weights,z)
 
@@ -48,6 +49,13 @@ fig, ax = plt.subplots()
 
 ax.scatter(xc,yc,c=zc)
 ax.scatter(x,y,c=z, edgecolor="black")
+ax.title("Kriged Grade")
+
+st.pyplot(fig)
+
+ax.scatter(xc,yc,c=kvar)
+ax.scatter(x,y,c=z, edgecolor="black")
+ax.title("Kriging Variance")
 
 st.pyplot(fig)
 
