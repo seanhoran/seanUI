@@ -62,7 +62,5 @@ st.pyplot(fig)
 
 st.image("Lyceum Presentation.jpg", width=700)
 
-path = "https://docs.google.com/file/d/1F7G4TYfLPyR-aLb88slpKxCNuHgiVdh-/edit?usp=docslist_api&filetype=msexcel"
-df = pd.read_excel(path)
-st.dataframe(df)
+
 
