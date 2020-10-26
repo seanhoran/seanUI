@@ -59,14 +59,6 @@ ax.scatter(xc,yc,c=kvar)
 ax.scatter(x,y,c=z, edgecolor="black")
 st.pyplot(fig)
 
-#url = "https://github.com/seanhoran/seanUI/blob/main/Lyceum Presentation.pdf"
-#html = '<embed src="' + url +  '" width="800px" height="2100px" />'
-#html = '<iframe src="https://docs.google.com/gview?url=' + url + '" style="width:600px; height:500px;" frameborder="0"></iframe>'
-#html = '<embed src="' + url + '" type="application/pdf"   height="700px" width="500">'
-
-#st.write(html)
-
-#st.components.v1.html(html, width=None, height=None, scrolling=False)
 
 st.image("Lyceum Presentation.jpg", width=700)
 
