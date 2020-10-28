@@ -45,6 +45,14 @@ kvar = 1 - (np.sum(distmat) - np.sum(weights*rdists, axis=1))
 
 zc = np.dot(weights,z)
 
+st.write("Variogram")
+
+fig, ax = plt.subplots()
+lags = np.arange(srange*1.5)
+lvars = variogram(lags, nugget=nugget, var=var, srange=srange)
+ax.plot(lags, lvars, "-r")
+st.pyplot(fig)
+
 st.write("Kriged Grade")
 
 fig, ax = plt.subplots()
