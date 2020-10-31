@@ -43,7 +43,7 @@ weights = np.dot(rdists, invdists)
 
 kvar = 1 - (np.sum(distmat) - np.sum(weights*rdists, axis=1))
 
-zc = np.dot(weights,z)
+zc = np.dot(weights,z) + (1.-np.sum(weights, axis=1))*np.average(z)
 
 st.write("Variogram")
 
