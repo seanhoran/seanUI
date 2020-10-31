@@ -68,6 +68,13 @@ ax.scatter(xc,yc,c=kvar)
 ax.scatter(x,y,c=z, edgecolor="black")
 st.pyplot(fig)
 
+st.write("Sum of weights")
+
+fig, ax = plt.subplots()
+ax.scatter(xc,yc,c=np.sum(weights, axis=1))
+ax.scatter(x,y,c=z, edgecolor="black")
+st.pyplot(fig)
+
 
 st.image("Lyceum Presentation.jpg", width=700)
 
