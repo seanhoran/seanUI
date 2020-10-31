@@ -48,7 +48,7 @@ zc = np.dot(weights,z)
 st.write("Variogram")
 
 fig, ax = plt.subplots()
-lags = np.arange(srange*1.5)
+lags = np.arange(0., srange*1.5, 0.01)
 lvars = variogram(lags, nugget=nugget, var=var, srange=srange)
 ax.plot(lags, lvars, "-r")
 st.pyplot(fig)
