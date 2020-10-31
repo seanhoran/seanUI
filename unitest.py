@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 def variogram(h, nugget=0.0, var=1.0, srange=100.):
-    gamma = nugget + var*((3*h)/(2*srange)-(h**3)/(srange**3))
+    gamma = nugget + var*((3*h)/(2*srange)-(h**3)/(2*srange**3))
     gamma[h==0]=0.
     gamma[h>srange]=1.0
     return gamma; 
