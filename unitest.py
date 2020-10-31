@@ -71,8 +71,8 @@ st.pyplot(fig)
 st.write("Sum of weights")
 
 fig, ax = plt.subplots()
-ax.scatter(xc,yc,c=np.sum(weights, axis=1))
-fig.colorbar()
+im=ax.scatter(xc,yc,c=np.sum(weights, axis=1))
+fig.colorbar(im)
 st.pyplot(fig)
 
 
