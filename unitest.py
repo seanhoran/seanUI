@@ -51,7 +51,7 @@ fig, ax = plt.subplots()
 lags = np.arange(0., srange*1.5, 0.01)
 lvars = variogram(lags, nugget=nugget, var=var, srange=srange)
 ax.plot(lags, lvars, "-r")
-ax.xlim((0,5.0))
+ax.x_lim((0,5.0))
 st.pyplot(fig)
 
 st.write("Kriged Grade")
