@@ -9,7 +9,6 @@ def variogram(h, nugget=0.0, var=1.0, srange=100.):
     gamma[h>srange]=1.0
     return gamma; 
 
-st.cache()
 
 st.title("Kriging Example")
 st.write("Small proof of concept APP created by Sean Horan")
