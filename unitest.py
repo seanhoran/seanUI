@@ -58,7 +58,7 @@ st.pyplot(fig)
 st.write("Kriged Grade")
 
 fig, ax = plt.subplots()
-ax.scatter(xc,yc,c=zc)
+ax.scatter(xc,yc,c=zc, marker="s", ms=2)
 ax.scatter(x,y,c=z, edgecolor="black")
 st.pyplot(fig)
 
@@ -69,7 +69,7 @@ ax.scatter(xc,yc,c=kvar)
 ax.scatter(x,y,c=z, edgecolor="black")
 st.pyplot(fig)
 
-st.write("Sum of weights")
+st.write("Sum of weights"), 
 
 fig, ax = plt.subplots()
 im=ax.scatter(xc,yc,c=np.sum(weights, axis=1))
