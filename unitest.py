@@ -58,7 +58,7 @@ st.pyplot(fig)
 st.write("Kriged Grade")
 
 fig, ax = plt.subplots(figsize=(10,10))
-ax.scatter(xc,yc,c=zc, marker="s", s=5, alpha=0.5, linewidth=0.5, edgecolors="black")
+ax.scatter(xc,yc,c=zc, marker="s", s=10, alpha=0.5, linewidth=0.5, edgecolors="black")
 ax.scatter(x,y,c=z, edgecolor="black")
 st.pyplot(fig)
 
