@@ -11,7 +11,7 @@ def variogram(h, nugget=0.0, var=1.0, srange=100.):
 
 
 st.title("Kriging Example")
-st.write("hello")
+st.write("RPA now part of SLR")
 st.write("Small proof of concept APP created by Sean Horan")
 st.sidebar.title("this is a sidebar")
 
