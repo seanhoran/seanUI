@@ -71,7 +71,8 @@ st.pyplot(fig)
 st.write("Kriging Variance")
 
 fig, ax = plt.subplots()
-ax.scatter(xc,yc,c=kvar)
+im=ax.scatter(xc,yc,c=kvar)
+fig.colorbar(im)
 ax.scatter(x,y,c=z, edgecolor="black")
 st.pyplot(fig)
 
