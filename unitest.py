@@ -58,7 +58,7 @@ zc = np.dot(weights,z) + (1.-np.sum(weights, axis=1))*np.average(z)
 sim = []
 
 for mu, sigma in zip(zc, kvar):
-    sim.append(np.random.normal(mu, 0.1,1)[0])
+    sim.append(np.random.normal(mu, 0.01,1)[0])
 
 st.write("Variogram")
 
