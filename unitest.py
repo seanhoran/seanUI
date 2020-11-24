@@ -47,7 +47,7 @@ weights = np.dot(rdists, invdists)
 
 cc=[]
 for d in distmat:
-    cc.append(np.dot(weights, d))
+    cc.append(np.sum(np.dot(weights, d), axis=1))
  
 st.write(np.shape(cc))
 
