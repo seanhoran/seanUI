@@ -75,7 +75,8 @@ ax.scatter(xc,yc,c=kvar)
 ax.scatter(x,y,c=z, edgecolor="black")
 st.pyplot(fig)
 
-st.write("One Realization of a Simulation"), 
+st.write("One Realization of a Simulation")
+st.write(sim)
 
 fig, ax = plt.subplots()
 im=ax.scatter(xc,yc,c=sim)
