@@ -47,7 +47,10 @@ kvar = 1 - (np.sum(distmat) - np.sum(weights*rdists, axis=1))
 
 zc = np.dot(weights,z) + (1.-np.sum(weights, axis=1))*np.average(z)
 
-sim = np.random.normal(zc, kvar)
+sim = []
+
+for mu, sigma in zip(zc, kvar):
+    sim.append(np.random.normal(mu, sigma,1)[0])
 
 st.write("Variogram")
 
