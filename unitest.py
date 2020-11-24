@@ -47,6 +47,8 @@ kvar = 1 - (np.sum(distmat) - np.sum(weights*rdists, axis=1))
 
 zc = np.dot(weights,z) + (1.-np.sum(weights, axis=1))*np.average(z)
 
+sim = np.random.normal(zc, kvar)
+
 st.write("Variogram")
 
 fig, ax = plt.subplots()
@@ -70,10 +72,10 @@ ax.scatter(xc,yc,c=kvar)
 ax.scatter(x,y,c=z, edgecolor="black")
 st.pyplot(fig)
 
-st.write("Sum of weights"), 
+st.write("One Realization of a Simulation"), 
 
 fig, ax = plt.subplots()
-im=ax.scatter(xc,yc,c=np.sum(weights, axis=1))
+im=ax.scatter(xc,yc,c=sim)
 fig.colorbar(im)
 st.pyplot(fig)
 
