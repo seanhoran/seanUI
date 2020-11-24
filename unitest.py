@@ -49,7 +49,7 @@ cc=[]
 for d in distmat:
     cc.append(np.dot(weights, d))
 
-kvar = cc + 1. - 2.*np.sum(weights*rdists, axis=1)
+kvar = np.array(cc) + 1. - 2.*np.sum(weights*rdists, axis=1)
 
 zc = np.dot(weights,z) + (1.-np.sum(weights, axis=1))*np.average(z)
 
