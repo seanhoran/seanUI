@@ -44,7 +44,12 @@ invdists = np.linalg.inv(distmat)
 weights = np.dot(rdists, invdists)
 
 #kvar = 1 - (np.sum(distmat) - np.sum(weights*rdists, axis=1))
-kvar = np.dot(weights, distmat) + 1. - 2.*np.sum(weights*rdists, axis=1)
+
+cc=[]
+for d in distmat:
+    cc.append(np.dot(weights, d)
+
+kvar = cc + 1. - 2.*np.sum(weights*rdists, axis=1)
 
 zc = np.dot(weights,z) + (1.-np.sum(weights, axis=1))*np.average(z)
 
