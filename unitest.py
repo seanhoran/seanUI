@@ -45,13 +45,14 @@ weights = np.dot(rdists, invdists)
 
 #kvar = 1 - (np.sum(distmat) - np.sum(weights*rdists, axis=1))
 
-cc=[]
-for w in weights:
-    cc.append(np.dot(distmat, w))
-cc = np.sum(cc, axis=1)
-st.write(np.shape(cc))
+cc=np.ones(1000)
+for i in range(1000):
+    cc[i] = 0
+    for j in range(100):
+        for k in range(100):
+            cc[i] +=weights[i,j]*distmat[j,k]
 
-kvar = np.array(cc) + 1. - 2.*np.sum(weights*rdists, axis=1)
+kvar = cc + 1. - 2.*np.sum(weights*rdists, axis=1)
 
 zc = np.dot(weights,z) + (1.-np.sum(weights, axis=1))*np.average(z)
 
