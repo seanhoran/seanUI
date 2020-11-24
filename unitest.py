@@ -45,8 +45,8 @@ weights = np.dot(rdists, invdists)
 
 #kvar = 1 - (np.sum(distmat) - np.sum(weights*rdists, axis=1))
 
-cc=np.ones(1000)
-for i in range(1000):
+cc=np.ones(10000)
+for i in range(10000):
     cc[i] = 0
     for j in range(100):
         for k in range(100):
