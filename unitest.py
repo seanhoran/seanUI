@@ -53,6 +53,7 @@ for i in range(10000):
             cc[i] +=weights[i,j]*weights[i,k]*distmat[j,k]
 
 kvar = cc + 1. - 2.*np.sum(weights*rdists, axis=1)
+kvar = 1. - kvar
 
 zc = np.dot(weights,z) + (1.-np.sum(weights, axis=1))*np.average(z)
 
